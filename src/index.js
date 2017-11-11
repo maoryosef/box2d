@@ -71,7 +71,7 @@ function init() {
 	};
 
 	debugDraw.SetSprite(document.getElementById('canvas').getContext('2d'));
-	debugDraw.SetDrawScale(SCALE);
+	debugDraw.SetDrawScale(SCALE / 2);
 	debugDraw.SetFillAlpha(0.5);
 	debugDraw.SetLineThickness(1.0);
 	debugDraw.SetFlags(b2DebugDraw.e_shapeBit | b2DebugDraw.e_jointBit);
