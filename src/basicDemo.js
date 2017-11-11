@@ -77,7 +77,7 @@ function init() {
 	debugDraw.SetFlags(b2DebugDraw.e_shapeBit | b2DebugDraw.e_jointBit);
 	world.SetDebugDraw(debugDraw);
 
-	window.setInterval(update, 1000 / 60);
+	requestAnimationFrame(update);
 
 	function update() {
 		world.Step(1 / 60, 10, 10);
@@ -100,6 +100,8 @@ function init() {
 
 			it = it.GetNext();
 		}
+
+		requestAnimationFrame(update);
 	}
 }
 
