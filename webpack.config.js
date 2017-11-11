@@ -4,7 +4,8 @@ const path = require('path');
 
 const webpackConfig = {
 	entry: {
-		basic_demo: './src/basicDemo.js'
+		basic_demo: './src/basicDemo.js',
+		domElemets_demo: './src/domElementsDemo.js'
 	},
 	output: {
 		libraryTarget: 'umd',

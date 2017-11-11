@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title></title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<script src="/dist/domElemets_demo.bundle.js" async defer></script>
+		<style>
+			body {
+				font-family: Helvetica;
+				font-size: 30px;
+			}
+			#container {
+				position:relative;
+				width: 800px;
+				height: 600px;
+				border: 1px solid black;
+				margin: 0 auto
+			}
+
+			#container > * {
+				position: absolute
+			}
+
+			#container > div {
+				border: 1px solid blue;
+				display: flex;
+    			align-items: center;
+    			justify-content: space-around;
+			}
+
+			#static {
+				width: 150px;
+				height: 150px;
+				background: aqua;
+				left: 270px;
+			    top: 230px;
+			}
+
+			h1, h2 {
+				border-bottom: 1px solid blue;
+				padding:0;
+				margin: 0;
+			}
+
+			#t1 {
+				left: 150px;
+				top: 65px;
+			}
+			#t2 {
+				left: 390px;
+				top: 105px;
+			}
+
+			#b1 {
+				left: 280px;
+    			top: 10px;
+			}
+		</style>
+	</head>
+	<body>
+		<canvas id="canvas" width="200" height="150" style="background-color:#333333;" ></canvas>
+		<div id="container">
+			<h1 id="t1">Title 1</h1>
+			<h2 id="t2">Title 2</h2>
+			<div id="b1">Box1</div>
+			<div id="static">Static box</div>
+		</div>
+	</body>
+</html>
