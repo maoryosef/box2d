@@ -100,9 +100,18 @@ function init() {
 	const timeLine = [];
 	const rewinded = [];
 	let paused = false;
+	const LIMIT_STEP = 1 / 60;
+	let prevTS = null;
 
-	function update() {
-		world.Step(1 / 60, 10, 10);
+	function update(ts) {
+		if (prevTS === null) {
+			prevTS = ts;
+		}
+
+		const progress = Math.max((ts - prevTS) / 1000, LIMIT_STEP);
+		world.Step(progress, 10, 10);
+		prevTS = ts;
+
 		world.DrawDebugData();
 		world.ClearForces();
 
